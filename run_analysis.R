@@ -45,6 +45,7 @@ subject_data <- rbind(subject_train, subject_test)
 colnames(subject_data) <- "Subject"
 
 all_data <- cbind(subject_data, y_data, x_data)
+write.table(all_data, file="all_data.txt", sep = " ",row.name=FALSE)
 
 #
 #   2 - Extract only the measurements on the mean and standard deviation for each measurement. 
@@ -57,6 +58,7 @@ new_data <- all_data[, grep("mean|std|Subject|Activity", names(all_data))]
 melted = melt(new_data, id.vars = c("Subject", "Activity"))
 means = dcast(melted , Subject + Activity ~ variable,mean)
 
-write.table(means, file="TidyData.txt", sep = " ")
+write.table(means, file="tidy_data.txt", sep = " ",row.name=FALSE)
 
-means_in <- read.table(file="TidyData.txt", sep = " ")
+# Check that the file read in is the same as the one written.
+means_in <- read.table(file="tidy_data.txt", sep = " ")
