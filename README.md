@@ -41,8 +41,11 @@ The `run_analysis.R`, `README.md` and `CodeBook.md` are uploaded to this Git rep
 3. run_analysis.R -- The R program which creates a tidy data set from the raw UCI data.
  
 # File combination
+The row and column concatenations of the various raw data files are described pictorially below: 
 
 ![Descriptive Slide](https://github.com/mixedasic/Getting-and-Cleaning-Data-Course-Project/blob/master/Slide2.png)
+
+The above slide is copied from "[David's Course Project FAQ](https://class.coursera.org/getdata-006/forum/thread?thread_id=43) in the Discussion Forums".
 
 # Detail Explanation
 A more detailed explanation of the experiments is:
